@@ -1,0 +1,1 @@
+data merge entity @s {ArmorItems:[{},{},{},{id:"minecraft:leather_helmet",count:1}]}

@@ -6,6 +6,10 @@ $summon wandering_trader ~ ~ ~ {\
   Invulnerable:1b,\
   UUID:[I;0,0,0,$(uuid_int)],\
   CanPickUpLoot:0b,\
-  Tags:["pathfinder"],\
-  Team:"nopush"\
+  Tags:["pathfinder", "level_update_needed"],\
+  Team:"nopush",\
+  Offers:{}\
 }
+
+execute as @e[tag=pathfinder, tag=level_update_needed, limit=1, sort=nearest] run \
+  function arena:pathfunder/summon_helpers/set_attributes

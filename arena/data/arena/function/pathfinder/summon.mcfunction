@@ -1,6 +1,17 @@
 # Summon a pathfinder entity + an attatched follower at the calling location
-# say arena:pathfinder/summon
+# say arena:pathfinder/summon inputs: #pf_summon_level, #pf_summon_type
 # Run as anything at location to summon.
+
+# Inputs:
+# #pf_summon_level: set scoreboard value before calling summon
+#   0 - No AI, standard mob (no helmet)
+#   1 - Pathfinder (leather helmet)
+#   2 - Pathfinder + Can break blocks (iron helmet)
+#   3 - Pathfinder + Can place and break blocks (diamond helmet)
+# 
+# #pf_summon_type: set scoreboard value before calling summon
+#   0 - skeleton
+#   1 - skeleton + bow
 
 # Determine next UUID int + string
 execute store result storage arena:data uuid_int int 1 run scoreboard players get #pf_minimum_uuid v
